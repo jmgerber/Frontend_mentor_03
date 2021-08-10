@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+
+* {
+  font-family: "Chivo", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  background-color: #121725;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  margin: 130px 0 0 165px;
+  @media (max-width: 1100px) {  /* Tablet */
+    height: 100vh;
+    margin: 0 0 0 39px;
+  }
+  @media (max-width: 760px) { /* Mobile */
+    margin: 0;
+  }
+  .logo {
+    position: relative;
+    top: -28px;
+    @media (max-width: 1100px) {  /* Tablet */
+      top: 50px;
+    }
+    @media (max-width: 760px) { /* Mobile */
+      align-self: center;
+      top: inherit;
+      margin: 62px 0 57px;
+    }
+  }
+  .bg-image{
+    align-self: flex-end;
+    position: absolute;
+    z-index: -10;
+    background: url("../../assets/desktop/image-host.jpg") no-repeat 50%;
+    height: 640px;
+    width: 888px;
+    @media (max-width: 1100px) {  /* Tablet */
+      width: 491px;
+      height: 767px;
+      background: url("../../assets/tablet/image-host.jpg") no-repeat 50%;
+    }
+    @media (max-width: 760px) { /* Mobile */
+      background: url("../../assets/mobile/image-host.jpg") no-repeat;
+      background-position: top;
+      background-size: contain;
+      width: 100%;
+      height: 667px;
+      &::after {
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: #121725;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+  .text-content {
+    background-color: #121725;
+    width: 57%;
+    height: 509px;
+    margin-top: 71px;
+    @media (max-width: 1100px) {  /* Tablet */
+      width: 87%;
+      margin-top: 187px;
+      height: auto;
+    }
+    @media (max-width: 760px) { /* Mobile */
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: inherit;
+      width: auto;
+      margin: 0 24px 0;
+    }
+    h1 {
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 62px;
+      font-size: 52px;
+      color: #fff;
+      margin-bottom: 24px;
+      margin-top: 88px;
+      span {
+        color: #54E6AF;
+      }
+      @media (max-width: 1100px) {  /* Tablet */
+        font-size: 48px;
+        margin-top: 93px;
+      }
+      @media (max-width: 760px) { /* Mobile */
+        font-size: 26px;
+        line-height: 38px;
+        text-align: center;
+        margin: 0 0 16px;
+      }
+    }
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      color: #C2CBE5;
+      width: 62%;
+      margin-bottom: 40px;
+      @media (max-width: 1100px) {  /* Tablet */
+        width: 71%;
+      }
+      @media (max-width: 760px) { /* Mobile */
+        width: auto;
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 0 0 40px;
+      }
+    }
+    form {
+      position: relative;
+      margin-bottom: 64px;
+      @media (max-width: 760px) { /* Mobile */
+        order: 1;
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+    #email-input {
+      height: 56px;
+      width: 255px;
+      background-color: #2C344B;
+      font-size: 14px;
+      line-height: 28px;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      border-radius: 28px;
+      padding-left: 32px;
+      padding-right: 172px;
+      @media (max-width: 760px) { /* Mobile */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0 0 32px;
+        margin-bottom: 16px;
+      }
+    }
+    .submit-button {
+      height: 46px;
+      width: 162px;
+      border: none;
+      border-radius: 28px;
+      background-color: #54E6AF;
+      font-weight: 700;
+      font-size: 14px;
+      position: absolute;
+      left: 290px;
+      top: 6px;
+      cursor: pointer;
+      @media (max-width: 760px) { /* Mobile */
+        position: inherit;
+        left: inherit;
+        top: inherit;
+        width: 100%;
+      }
+      &:hover {
+        background-color: #B3FFE2;
+      }
+    }
+    .error-message {
+      font-size: 12px;
+      color: #FB3E3E;
+      font-weight: bold;
+      text-align: left;
+      margin: 8px 0 0 32px;
+      float: left;
+    }
+    .podcast-list {
+      a {
+        margin-right: 40px;
+        @media (max-width: 760px) { /* Mobile */
+          margin-right: 23px;
+          &:last-child {
+            margin: 0;
+          }
+          img {
+            width: 17.3%;
+          }
+        }
+      }
+      @media (max-width: 760px) { /* Mobile */
+        margin-bottom: 48px;
+      }
+    }
+  }
+  .bg-pattern-dots {
+    align-self: flex-end;
+    position: relative;
+    top: -52px;
+    @media (max-width: 1100px) {  /* Tablet */
+      position: absolute;
+      bottom: -3px;
+      left: 30px;
+      top: inherit;
+    }
+    @media (max-width: 760px) { /* Mobile */
+      display: none;
+    }
+  }
+}
